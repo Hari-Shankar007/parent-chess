@@ -149,6 +149,11 @@ table{width:100%;border-collapse:collapse}th,td{padding:10px;border-bottom:1px s
 <div class="modal" id="assignModal"><div class="box"><div class="boxHead"><div><strong id="assignTitle">Assign Students</strong><div class="muted small">Add or remove students for this tournament.</div></div><button class="x" onclick="closeAssign()">&times;</button></div><div class="boxBody" id="assignBody"></div></div></div>
 
 <script>
+
+  const supabaseUrl = 'https://pxfvfxbojhvutyxqudqa.supabase.co';  // from Settings → API
+  const supabaseKey = 'sb_publishable_BMVYjuKHb5IdZfm5tCfIOg_Gjfe_eXI';                    // the publishable key you see now
+  const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
 var STORE="educhess_local_v9_fixed";
 var months=["January","February","March","April","May","June","July","August","September","October","November","December"], days=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 var now=new Date(), currentMonth=ym(now), editId="", assignTournamentId="";
@@ -372,11 +377,7 @@ Array.prototype.forEach.call(document.querySelectorAll("[id]"),function(node){if
 resetStudentForm();
 renderAll();
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-  const supabaseUrl = 'https://pxfvfxbojhvutyxqudqa.supabase.co';  // from Settings → API
-  const supabaseKey = 'sb_publishable_BMVYjuKHb5IdZfm5tCfIOg_Gjfe_eXI';                    // the publishable key you see now
-  const supabase = supabase.createClient(supabaseUrl, supabaseKey);
-</script>
+
 </script>
 </body>
 </html>
