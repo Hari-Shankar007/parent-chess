@@ -371,6 +371,12 @@ function clearAll(){if(confirm("Clear ALL local EduChess data?")&&confirm("Final
 Array.prototype.forEach.call(document.querySelectorAll("[id]"),function(node){if(!window[node.id])window[node.id]=node});
 resetStudentForm();
 renderAll();
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const supabaseUrl = 'https://pxfvfxbojhvutyxqudqa.supabase.co';  // from Settings → API
+  const supabaseKey = 'sb_publishable_BMVYjuKHb5IdZfm5tCfIOg_Gjfe_eXI';                    // the publishable key you see now
+  const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+</script>
 </script>
 </body>
 </html>
